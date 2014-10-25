@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: tube-alert_development
   pool: 5
-  username: tube-alert
+  username: tubealert
   password: password
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: tube-alert_test
   pool: 5
-  username: tube-alert
+  username: tubealert
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: tube-alert_production
   pool: 5
-  username: tube-alert
+  username: tubealert
   password:

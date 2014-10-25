@@ -48,3 +48,6 @@ gem 'rails_12factor', group: :production
 gem "haml-rails"
 gem 'clockwork'
 gem 'delayed_job_active_record'
+gem 'colorize'
+gem 'state_machine'
+gem 'rails-observers'
