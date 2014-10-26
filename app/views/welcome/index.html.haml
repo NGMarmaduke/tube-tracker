@@ -1,4 +1,12 @@
-%div.hello#id
-	%h1.header 
-		welcome 
-		%span= @hello
+#content
+  .all-lines
+    - @lines.each do |line|
+      .line{ class: line.name }
+        .name= line.name.gsub('-', ' & ').titleize
+        .status{ class: line.state }
+          - if line.state == 'good_service'
+            =icon('check')
+          - else
+            =icon('times')
+        .reason= line.delay_reason
+#map

@@ -3,10 +3,10 @@ require 'json'
 
 class StatusPoller
 	def initialize
-    Delayed::Worker.logger.debug "Queued Poll job: #{DateTime.now}"
+    Delayed::Worker.logger.info "Queued Poll job: #{DateTime.now}"
 	end
   def perform
-    Delayed::Worker.logger.debug "==================== POLL START TIME: #{DateTime.now} =============================".blue
+    Delayed::Worker.logger.info "==================== POLL START TIME: #{DateTime.now} =============================".blue
     results = JSON.parse(open(url).read)
     results.each do |line|
       db_line = Line.where(name: line['id']).first
